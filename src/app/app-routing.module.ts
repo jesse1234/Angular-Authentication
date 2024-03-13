@@ -15,21 +15,22 @@ import { CreateBankBranchComponent } from './components/create-bank-branch/creat
 import { UpdateBankBranchComponent } from './components/update-bank-branch/update-bank-branch.component';
 import { UsersModule } from './users/users.module';
 import { RoleGuard } from './guard/role.guard';
+import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
   {path:'signup', component: SignupComponent},
   {path:'login', component: LoginComponent},
   {path:'dashboard', component: DashboardComponent, canActivate: [RoleGuard]},
-  {path:'users-table', component: UsersTableComponent},
-  {path: 'update-user/:id', component: UpdateUsersComponent},
-  {path: 'create-user', component:CreateUsersComponent},
-  {path:'user-groups-table', component:UserGroupsTableComponent},
-  {path: 'create-user-group', component: CreateUserGroupComponent},
-  {path: 'update-user-group/:id', component: UpdateUserGroupComponent},
-  {path: 'bank-branch-table', component: BankBranchTableComponent},
-  {path: 'create-bank-branch', component: CreateBankBranchComponent},
-  {path: 'update-bank-branch/:id', component: UpdateBankBranchComponent},
+  {path:'users-table', component: UsersTableComponent, canActivate: [AuthGuard]},
+  {path: 'update-user/:id', component: UpdateUsersComponent, canActivate: [AuthGuard]},
+  {path: 'create-user', component:CreateUsersComponent, canActivate: [AuthGuard]},
+  {path:'user-groups-table', component:UserGroupsTableComponent, canActivate: [AuthGuard]},
+  {path: 'create-user-group', component: CreateUserGroupComponent, canActivate: [AuthGuard]},
+  {path: 'update-user-group/:id', component: UpdateUserGroupComponent, canActivate: [AuthGuard]},
+  {path: 'bank-branch-table', component: BankBranchTableComponent, canActivate: [AuthGuard]},
+  {path: 'create-bank-branch', component: CreateBankBranchComponent, canActivate: [AuthGuard]},
+  {path: 'update-bank-branch/:id', component: UpdateBankBranchComponent, canActivate: [AuthGuard]},
 
   {path: 'user',loadChildren:() => import('./users/users.module').then(m => m.UsersModule)}
 ];

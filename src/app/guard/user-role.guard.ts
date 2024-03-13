@@ -22,6 +22,7 @@ export class UserRoleGuard implements CanActivate{
       // Handle other roles or unexpected scenarios
       console.error('Unknown user role');
       // Redirect user to the login page or some other appropriate page
+      alert("Please log in first")
       this.router.navigateByUrl('/login');
       return false;
     }
