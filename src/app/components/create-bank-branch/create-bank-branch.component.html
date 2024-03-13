@@ -1,0 +1,146 @@
+<div class="wrapper">
+    <app-main-header></app-main-header>
+    <app-main-sidebar></app-main-sidebar>
+    <div class="content-wrapper">
+        <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Create User</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form [formGroup]="createBranch">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="">Branch Code</label>
+                  <input type="text" class="form-control" name="branch_code" placeholder="Branch Code" formControlName="branch_code">
+                </div>
+                <div class="form-group">
+                  <label for="">Address</label>
+                  <input type="text" class="form-control" name="address" placeholder="Address" formControlName="address">
+                </div>
+                <div class="form-group">
+                    <label for="">Bank ID</label>
+                    <input type="number" class="form-control" name="bank_id" placeholder="Bank ID" formControlName="bank_id">
+                </div>
+                <div class="form-group">
+                    <label for="">Location ID</label>
+                    <input type="number" class="form-control" name="location_id" placeholder="Location ID" formControlName="location_id">
+                </div>
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Name" formControlName="name">
+                </div>
+                <div class="form-group">
+                    <label for="">Phone</label>
+                    <input type="number" class="form-control" name="phone" placeholder="Phone" formControlName="phone">
+                </div>
+                <div class="form-group">
+                    <label for="">Status</label>
+                    <input type="number" class="form-control" name="status" placeholder="Status" formControlName="status">
+                </div>
+                <div class="form-group">
+                    <label for="">Created By</label>
+                    <input type="number" class="form-control" name="created_by" placeholder="Created By" formControlName="created_by">
+                </div>
+                <div class="form-group">
+                    <label for="">Created At</label>
+                    <input type="datetime-local" class="form-control" name="created_at" placeholder="Created At" formControlName="created_at">
+                </div>
+                <div class="form-group">
+                    <label for="">Territory Id</label>
+                    <input type="number" class="form-control" name="territory_id" placeholder="Territory ID" formControlName="territory_id">
+                </div>
+                <div class="form-group">
+                    <label for="">Latitude</label>
+                    <input type="text" class="form-control" name="latitude" placeholder="Latitude" formControlName="latitude">
+                </div>
+                <div class="form-group">
+                    <label for="">Longitude</label>
+                    <input type="text" class="form-control" name="longitude" placeholder="Longitude" formControlName="longitude">
+                </div>
+                <div class="form-group">
+                    <label for="">Verified</label>
+                    <input type="text" class="form-control" name="verified" placeholder="Verified" formControlName="verified">
+                </div>
+                <div class="form-group">
+                    <label for="">Verified By</label>
+                    <input type="text" class="form-control" name="verified_by" placeholder="Verified By" formControlName="verified_by">
+                </div>
+                <div class="form-group">
+                    <label for="">Verified On</label>
+                    <input type="text" class="form-control" name="verified_on" placeholder="Verified On" formControlName="verified_on">
+                </div>
+                <div class="form-group">
+                    <label for="">Reject</label>
+                    <input type="text" class="form-control" name="reject" placeholder="Reject" formControlName="reject">
+                </div>
+                <div class="form-group">
+                    <label for="">Deleted</label>
+                    <input type="text" class="form-control" name="deleted" placeholder="Deleted" formControlName="deleted">
+                </div>
+                <div class="form-group">
+                    <label for="">Deleted By</label>
+                    <input type="number" class="form-control" name="deleted_by" placeholder="Deleted By" formControlName="deleted_by">
+                </div>
+                <div class="form-group">
+                    <label for="">Deleted On</label>
+                    <input type="text" class="form-control" name="deleted_on" placeholder="Deleted On" formControlName="deleted_on">
+                </div>
+                <div class="form-group">
+                    <label for="">Apprv Deleted By</label>
+                    <input type="number" class="form-control" name="apprv_deleted_by" placeholder="Apprv Deleted By" formControlName="apprv_deleted_by">
+                </div>
+                <div class="form-group">
+                    <label for="">Apprv Deleted On</label>
+                    <input type="datetime-local" class="form-control" name="apprv_deleted_on" placeholder="Apprv Deleted On" formControlName="apprv_deleted_on">
+                </div>
+                  <div class="form-group">
+                    <label for="">Apprv Rejected By</label>
+                    <input type="number" class="form-control" name="apprv_rejected_by" placeholder="Apprv Rejected By" formControlName="apprv_rejected_by">
+                </div>
+                <div class="form-group">
+                    <label for="">Apprv Rejected On</label>
+                    <input type="datetime-local" class="form-control" name="apprv_rejected_on" placeholder="Apprv Rejected On" formControlName="apprv_rejected_on">
+                </div>
+                <div class="form-group">
+                    <label for="">Creation Status</label>
+                    <input type="text" class="form-control" name="creation_status" placeholder="Creation Status" formControlName="creation_status">
+                </div>
+                <div class="form-group">
+                    <label for="">Create Json</label>
+                    <input type="text" class="form-control" name="create_json" placeholder="Create Json" formControlName="create_json">
+                </div>
+                <div class="form-group">
+                    <label for="">Update Json</label>
+                    <input type="text" class="form-control" name="update_json" placeholder="Update Json" formControlName="update_json">
+                </div>
+                <div class="form-group">
+                    <label for="">Modified Date</label>
+                    <input type="datetime-local" class="form-control" name="modified_date" placeholder="Modified Date" formControlName="modified_date">
+                </div>
+                <div class="form-group">
+                    <label for="">Modified By</label>
+                    <input type="number" class="form-control" name="modified_by" placeholder="Modified By" formControlName="modified_by">
+                </div>
+                <div class="form-group">
+                    <label for="">Created Status</label>
+                    <input type="text" class="form-control" name="created_status" placeholder="Created Status" formControlName="created_status">
+                </div>
+              </div>
+              <!-- /.card-body -->
+    
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary" (click)="createBankBranch()">Submit</button>
+              </div>
+            </form>
+          </div>
+    </div>
+    <app-content-sidebar></app-content-sidebar>
+    <app-main-footer></app-main-footer>
+  </div>
+  <!-- ./wrapper -->
+
+
+
+
+

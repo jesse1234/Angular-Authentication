@@ -1,0 +1,125 @@
+<div class="wrapper">
+    <app-main-header></app-main-header>
+    <app-main-sidebar></app-main-sidebar>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Bank Branch Table</h1>
+            </div>
+            <div class="col-sm-6">
+                <button type="submit" class="btn btn-block btn-primary" routerLink="/create-bank-branch" style="width:250px; float: right;">Create Bank Branch</button>
+            </div>
+            </div>
+        </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-12">
+                <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title"></h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="table-wrapper">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Branch Code</th>
+                                <th>Address</th>
+                                <th>Bank ID</th>
+                                <th>Location ID</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Status</th>
+                                <th>Created By</th>
+                                <th>Created At</th>
+                                <th>Territory ID</th>
+                                <th>Latitude</th>
+                                <th>Longitude</th>
+                                <th>Verified</th>
+                                <th>Verified On</th>
+                                <th>Verified By</th>
+                                <th>Reject</th>
+                                <th>Deleted</th>
+                                <th>Deleted By</th>
+                                <th>Deleted On</th>
+                                <th>Apprv Deleted By</th>
+                                <th>Apprv Deleted On</th>
+                                <th>Apprv Rejected By</th>
+                                <th>Apprv Rejected On</th>
+                                <th>Creation Status</th>
+                                <!-- <th>Create Json</th>
+                                <th>Update Json</th> -->
+                                <th>Modified Date</th>
+                                <th>Modified By</th>
+                                <!-- <th>Created Status</th> -->
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let branch of bankBranch">
+                                <td>{{branch.id}}</td>
+                                <td>{{branch.branch_code}}</td>
+                                <td>{{branch.address}}</td>
+                                <td>{{branch.bank_id}}</td>
+                                <td>{{branch.location_id}}</td>
+                                <td>{{branch.name}}</td>
+                                <td>{{branch.phone}}</td>
+                                <td>{{branch.status}}</td>
+                                <td>{{branch.created_by}}</td>
+                                <td>{{branch.created_at}}</td>
+                                <td>{{branch.territory_id}}</td>
+                                <td>{{branch.latitude}}</td>
+                                <td>{{branch.longitude}}</td>
+                                <td>{{branch.verified}}</td>
+                                <td>{{branch.verified_on}}</td>
+                                <td>{{branch.verified_by}}</td>
+                                <td>{{branch.reject}}</td>
+                                <td>{{branch.deleted}}</td>
+                                <td>{{branch.deleted_by}}</td>
+                                <td>{{branch.deleted_on}}</td>
+                                <td>{{branch.apprv_deleted_by}}</td>
+                                <td>{{branch.apprv_deleted_on}}</td>
+                                <td>{{branch.apprv_rejected_by}}</td>
+                                <td>{{branch.apprv_rejected_on}}</td>
+                                <td>{{branch.creation_status}}</td>
+                                <!-- <td>{{branch.create_json}}</td>
+                                <td>{{branch.update_json}}</td> -->
+                                <td>{{branch.modified_date}}</td>
+                                <td>{{branch.modified_by}}</td>
+                                <!-- <td>{{branch.created_status}}</td> -->
+                                <td><button type="submit" class="btn btn-block btn-info" [routerLink]="['/update-bank-branch', branch.id]">Update Bank Branch</button></td>
+                                <td><button type="submit" class="btn btn-block btn-danger" (click)="deleteBankBranch(branch.id)">Delete Bank Branch</button></td>
+                            </tr>
+                            </tbody>
+                            </table>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <app-content-sidebar></app-content-sidebar>
+    <app-main-footer></app-main-footer>
+  </div>
+  <!-- ./wrapper -->
+
+
+

@@ -1,0 +1,130 @@
+<div class="wrapper">
+    <app-main-header></app-main-header>
+    <app-main-sidebar></app-main-sidebar>
+    <div class="content-wrapper">
+        <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Update User Group</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form [formGroup]="updateGroups">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="">Group Code</label>
+                  <input type="text" class="form-control" name="group_code" placeholder="Group Code" formControlName="group_code">
+                </div>
+                <div class="form-group">
+                  <label for="">Group Name</label>
+                  <input type="text" class="form-control" name="group_name" placeholder="Group Name" formControlName="group_name">
+                </div>
+                <div class="form-group">
+                    <label for="">Group Type ID</label>
+                    <input type="number" class="form-control" name="group_type_id" placeholder="Group Type ID" formControlName="group_type_id">
+                </div>
+                <div class="form-group">
+                    <label for="">Active</label>
+                    <input type="number" class="form-control" name="" placeholder="Active" formControlName="active">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Created By</label>
+                    <input type="number" class="form-control" name="created_by" placeholder="Created By" formControlName="created_by">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Created On</label>
+                    <input type="datetime-local" class="form-control" name="created_on" placeholder="Created On" formControlName="created_on">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Approved</label>
+                    <input type="text" class="form-control" name="approved" placeholder="Approved" formControlName="approved">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Approved On</label>
+                    <input type="datetime-local" class="form-control" name="approved_on" placeholder="Approved On" formControlName="approved_on">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Approved By</label>
+                    <input type="number" class="form-control" name="approved_by" placeholder="Approved By" formControlName="approved_by">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Reject</label>
+                    <input type="text" class="form-control" name="reject" placeholder="Reject" formControlName="reject">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Deleted</label>
+                    <input type="text" class="form-control" name="deleted" placeholder="Deleted" formControlName="deleted">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Deleted By</label>
+                    <input type="number" class="form-control" name="deleted_by" placeholder="Deleted By" formControlName="deleted_by">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Deleted On</label>
+                    <input type="datetime-local" class="form-control" name="deleted_on" placeholder="Deleted On" formControlName="deleted_on">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Apprv Deleted By</label>
+                    <input type="number" class="form-control" name="apprv_deleted_by" placeholder="Apprv Deleted By" formControlName="apprv_deleted_by">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Apprv Deleted On</label>
+                    <input type="datetime-local" class="form-control" name="apprv_deleted_on" placeholder="Apprv Deleted On" formControlName="apprv_deleted_on">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Apprv Rejected By</label>
+                    <input type="number" class="form-control" name="apprv_rejected_by" placeholder="Apprv Rejected By" formControlName="apprv_rejected_by">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Apprv Rejected On</label>
+                    <input type="datetime-local" class="form-control" name="apprv_rejected_on" placeholder="Apprv Rejected On" formControlName="apprv_rejected_on">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Creation Status</label>
+                    <input type="text" class="form-control" name="creation_status" placeholder="Creation Status" formControlName="creation_status">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Create Json</label>
+                    <input type="text" class="form-control" name="create_json" placeholder="Create Json" formControlName="create_json">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Update Json</label>
+                    <input type="text" class="form-control" name="update_json" placeholder="Update Json" formControlName="update_json">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Right Display Name</label>
+                    <input type="text" class="form-control" name="right_display_name" placeholder="Right Display Name" formControlName="right_display_name">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Modified By</label>
+                    <input type="number" class="form-control" name="modified_by" placeholder="Modified By" formControlName="modified_by">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Modified On</label>
+                    <input type="datetime-local" class="form-control" name="modified_on" placeholder="Modified On" formControlName="modified_on">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Group Codes</label>
+                    <input type="text" class="form-control" name="group_codes" placeholder="Group Codes" formControlName="group_codes">
+                  </div>
+                  <div class="form-group">
+                    <label for="">Group Names</label>
+                    <input type="text" class="form-control" name="group_names" placeholder="Groups Names" formControlName="group_names">
+                  </div>
+              </div>
+              <!-- /.card-body -->
+    
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary" (click)="updatingUserGroup()">Submit</button>
+              </div>
+            </form>
+          </div>
+    </div>
+    <app-content-sidebar></app-content-sidebar>
+    <app-main-footer></app-main-footer>
+  </div>
+  <!-- ./wrapper -->
+
+
+
+
+

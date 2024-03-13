@@ -16,6 +16,14 @@ import { ContentSidebarComponent } from './layout/content-sidebar/content-sideba
 import { MainFooterComponent } from './layout/main-footer/main-footer.component';
 import { UsersTableComponent } from './components/users-table/users-table.component';
 import { UpdateUsersComponent } from './components/update-users/update-users.component';
+import { CreateUsersComponent } from './components/create-users/create-users.component';
+import { UserGroupsTableComponent } from './components/user-groups-table/user-groups-table.component';
+import { CreateUserGroupComponent } from './components/create-user-group/create-user-group.component';
+import { UpdateUserGroupComponent } from './components/update-user-group/update-user-group.component';
+import { BankBranchTableComponent } from './components/bank-branch-table/bank-branch-table.component';
+import { CreateBankBranchComponent } from './components/create-bank-branch/create-bank-branch.component';
+import { UpdateBankBranchComponent } from './components/update-bank-branch/update-bank-branch.component';
+import { UsersModule } from './users/users.module';
 
 
 
@@ -33,6 +41,13 @@ import { UpdateUsersComponent } from './components/update-users/update-users.com
     MainFooterComponent,
     UsersTableComponent,
     UpdateUsersComponent,
+    CreateUsersComponent,
+    UserGroupsTableComponent,
+    CreateUserGroupComponent,
+    UpdateUserGroupComponent,
+    BankBranchTableComponent,
+    CreateBankBranchComponent,
+    UpdateBankBranchComponent,
 
   ],
   imports: [
@@ -40,7 +55,8 @@ import { UpdateUsersComponent } from './components/update-users/update-users.com
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    UsersModule
   ],
   providers: [
     provideClientHydration(),

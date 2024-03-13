@@ -1,0 +1,116 @@
+<div class="wrapper">
+    <app-main-header></app-main-header>
+    <app-main-sidebar></app-main-sidebar>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>User Groups Table</h1>
+            </div>
+            <div class="col-sm-6">
+                <button type="submit" class="btn btn-block btn-primary" routerLink="/create-user-group" style="width:250px; float: right;">Create User Groups</button>
+            </div>
+            </div>
+        </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-12">
+                <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title"></h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <div class="table-wrapper">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Group Code</th>
+                                <th>Group Name</th>
+                                <th>Group Type ID</th>
+                                <th>Active</th>
+                                <th>Created By</th>
+                                <th>Created On</th>
+                                <th>Approved</th>
+                                <th>Approved On</th>
+                                <th>Approved By</th>
+                                <th>Reject</th>
+                                <th>Deleted</th>
+                                <th>Deleted By</th>
+                                <th>Deleted On</th>
+                                <th>Appr Deleted By</th>
+                                <th>Appr Deleted On</th>
+                                <th>Appr Rejected By</th>
+                                <th>Appr Rejected On</th>
+                                <th>Creation Status</th>
+                                <!-- <th>Create Json</th>
+                                <th>Update Json</th> -->
+                                <th>Right Display Name</th>
+                                <th>Modified By</th>
+                                <th>Modified On</th>
+                                <th>Group Codes</th>
+                                <th>Group Names</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let group of userGroups">
+                                <td>{{group.id}}</td>
+                                <td>{{group.group_code}}</td>
+                                <td>{{group.group_name}}</td>
+                                <td>{{group.group_type_id}}</td>
+                                <td>{{group.active}}</td>
+                                <td>{{group.created_by}}</td>
+                                <td>{{group.created_on}}</td>
+                                <td>{{group.approved}}</td>
+                                <td>{{group.approved_on}}</td>
+                                <td>{{group.approved_by}}</td>
+                                <td>{{group.reject}}</td>
+                                <td>{{group.deleted}}</td>
+                                <td>{{group.deleted_by}}</td>
+                                <td>{{group.deleted_on}}</td>
+                                <td>{{group.apprv_deleted_by}}</td>
+                                <td>{{group.apprv_deleted_on}}</td>
+                                <td>{{group.apprv_rejected_by}}</td>
+                                <td>{{group.apprv_rejected_on}}</td>
+                                <td>{{group.creation_status}}</td>
+                                <!-- <td>{{group.create_json}}</td>
+                                <td>{{group.update_json}}</td> -->
+                                <td>{{group.right_display_name}}</td>
+                                <td>{{group.modified_by}}</td>
+                                <td>{{group.modified_on}}</td>
+                                <td>{{group.group_codes}}</td>
+                                <td>{{group.group_names}}</td>
+                                <td><button type="submit" class="btn btn-block btn-info" [routerLink]="['/update-user-group', group.id]">Update User Group</button></td>
+                                <td><button type="submit" class="btn btn-block btn-danger" (click)="deleteUserGroup(group.id)">Delete User Group</button></td>
+                            </tr>
+                            </tbody>
+                            </table>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <app-content-sidebar></app-content-sidebar>
+    <app-main-footer></app-main-footer>
+  </div>
+  <!-- ./wrapper -->
+
+

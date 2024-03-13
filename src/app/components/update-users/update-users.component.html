@@ -8,214 +8,209 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form>
+            <form [formGroup]="updateForm">
               <div class="card-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                  <input type="email" class="form-control" name="email"  formControlName="email">
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <label for="exampleInputPassword1">First Name</label>
+                  <input type="text" class="form-control" name="first_name"  formControlName="first_name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Full Name</label>
+                    <input type="text" class="form-control" name="fullname"  formControlName="fullname">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control" name="exampleInputPassword1" placeholder="Password" formControlName="password">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Phone</label>
+                    <input type="number" class="form-control" name="phone" placeholder="Phone" formControlName="phone">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Surname</label>
+                    <input type="text" class="form-control" name="surname" placeholder="Surname" formControlName="surname">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Username</label>
+                    <input type="text" class="form-control" name="username" placeholder="Username" formControlName="username">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Other Names</label>
+                    <input type="text" class="form-control" name="other_names" placeholder="Password" formControlName="other_names">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Group ID</label>
+                    <input type="number" class="form-control" name="group_id" placeholder="Group ID" formControlName="group_id">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Pos User Level</label>
+                    <input type="number" class="form-control" name="pos_user_level" placeholder="Pos User Level" formControlName="pos_user_level">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Type ID</label>
+                    <input type="number" class="form-control" name="type_id" placeholder="Type ID" formControlName="type_id">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Created By</label>
+                    <input type="number" class="form-control" name="created_by" placeholder="Created By" formControlName="created_by">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Created At</label>
+                    <input type="datetime-local" class="form-control" name="created_at" placeholder="Created At" formControlName="created_at">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Agent ID</label>
+                    <input type="number" class="form-control" name="agent_id" placeholder="Agent name" formControlName="agent_id">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Status</label>
+                    <input type="number" class="form-control" name="status" placeholder="Status" formControlName="status">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Verification Pass</label>
+                    <input type="text" class="form-control" name="verification_pass" placeholder="Verification Pass" formControlName="verification_pass">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Verified</label>
+                    <input type="text" class="form-control" name="verified" placeholder="Verified" formControlName="verified">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Verified By</label>
+                    <input type="number" class="form-control" name="verified_by" placeholder="Verified By" formControlName="verified_by">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Verified On</label>
+                    <input type="datetime-local" class="form-control" name="verified_on" placeholder="Verified On" formControlName="verified_on">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Agent Code</label>
+                    <input type="string" class="form-control" name="agent_code" placeholder="Agent Code" formControlName="agent_code">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Password Change Date</label>
+                    <input type="datetime-local" class="form-control" name="password_change_date" placeholder="Password Change Date" formControlName="password_change_date">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Locked</label>
+                    <input type="number" class="form-control" name="locked" placeholder="Locked" formControlName="locked">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Password Expired</label>
+                    <input type="number" class="form-control" name="password_expired" placeholder="Password Expired" formControlName="password_expired">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">First Login</label>
+                    <input type="number" class="form-control" name="firstlogin" placeholder="First Login" formControlName="firstlogin">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Branch ID</label>
+                    <input type="number" class="form-control" name="branch_id" placeholder="Branch ID" formControlName="branch_id">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Logged In</label>
+                    <input type="number" class="form-control" name="logged_in" placeholder="Logged In" formControlName="logged_in">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Reset</label>
+                    <input type="number" class="form-control" name="reset" placeholder="Reset" formControlName="reset">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Reject</label>
+                    <input type="text" class="form-control" name="reject" placeholder="Reject" formControlName="reject">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Deleted</label>
+                    <input type="text" class="form-control" name="deleted" placeholder="Deleted" formControlName="deleted">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Deleted By</label>
+                    <input type="number" class="form-control" name="deleted_by" placeholder="Deleted By" formControlName="deleted_by">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Deleted On</label>
+                    <input type="datetime-local" class="form-control" name="deleted_on" placeholder="Deleted On" formControlName="deleted_on">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Appr Deleted By</label>
+                    <input type="number" class="form-control" name="apprv_deleted_by" placeholder="Appr Deleted By" formControlName="apprv_deleted_by">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Appr Deleted On</label>
+                    <input type="datetime-local" class="form-control" name="apprv_deleted_on" placeholder="Appr Deleted On" formControlName="apprv_deleted_on">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Appr Rejected By</label>
+                    <input type="number" class="form-control" name="apprv_rejected_by" placeholder="Appr Rejected By" formControlName="apprv_rejected_by">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Appr Rejected On</label>
+                    <input type="datetime-local" class="form-control" name="apprv_rejected_on" placeholder="Appr Rejected On" formControlName="apprv_rejected_on">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Creation Status</label>
+                    <input type="text" class="form-control" name="creationStatus" placeholder="Creation Status" formControlName="creationStatus">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Create Json</label>
+                    <input type="text" class="form-control" name="create_json" placeholder="Create Json" formControlName="create_json">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Update Json</label>
+                    <input type="text" class="form-control" name="update_json" placeholder="Update Json" formControlName="update_json">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Last Login Date</label>
+                    <input type="datetime-local" class="form-control" name="last_login_date" placeholder="Last Login Date" formControlName="last_login_date">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Login Attempts</label>
+                    <input type="number" class="form-control" name="loginattempts" placeholder="Login Attempts" formControlName="loginattempts">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Modified On</label>
+                    <input type="datetime-local" class="form-control" name="modified_on" placeholder="Modified On" formControlName="modified_on">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Unblocked By</label>
+                    <input type="text" class="form-control" name="unblocked_by" placeholder="Unblocked By" formControlName="unblocked_by">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Blocked By</label>
+                    <input type="text" class="form-control" name="blocked_by" placeholder="Blocked By" formControlName="blocked_by">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Unblocked On</label>
+                    <input type="datetime-local" class="form-control" name="unblocked_on" placeholder="Unblocked By" formControlName="unblocked_on">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Blocked On</label>
+                    <input type="datetime-local" class="form-control" name="blocked_on" placeholder="Blocked On" formControlName="blocked_on">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">ID Number</label>
+                    <input type="text" class="form-control" name="IDNumber" placeholder="ID Number" formControlName="IDNumber">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Modified By</label>
+                    <input type="number" class="form-control" name="modified_by" placeholder="Modified By" formControlName="modified_by">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Created Status</label>
+                    <input type="text" class="form-control" name="created_status" placeholder="Creation Status" formControlName="created_status">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label for="exampleInputPassword1">Role</label>
+                    <input type="text" class="form-control" name="role" placeholder="Role" formControlName="role">
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-
               </div>
               <!-- /.card-body -->
     
               <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" (click)="updatingUser()">Submit</button>
               </div>
             </form>
           </div>

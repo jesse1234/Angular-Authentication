@@ -68,7 +68,8 @@ export class UsersTableComponent implements OnInit{
 
   users!: Users[];
   constructor(
-   private httpClient: HttpClient
+   private httpClient: HttpClient,
+   private service: UsersService
   ) {}
 
   ngOnInit(): void {
@@ -82,6 +83,13 @@ export class UsersTableComponent implements OnInit{
         console.log(response['users']);
       }
     );
+  }
+
+  deleteUser(id: number) {
+    this.service.deleteUser(id).subscribe((res) => {
+      console.log(res);
+      this.getUsers();
+    })
   }
   
 }
