@@ -60,39 +60,39 @@ export class LocalStorageService {
       return null; // or handle appropriately based on your application's logic
     }
     return JSON.parse(userString);
-    }
+  }
 
-    static isAdminLoggedIn(): boolean {
-      if(this.getToken() === null) {
-        return false;
-      }
-      const role: string = this.getUserRole();
-      return role === "ADMIN";
+  static isAdminLoggedIn(): boolean {
+    if(this.getToken() === null) {
+      return false;
     }
+    const role: string = this.getUserRole();
+    return role === "ADMIN";
+  }
 
-    static signOut() {
-      window.localStorage.removeItem(TOKEN);
-      window.localStorage.removeItem(USERID);
-      window.localStorage.removeItem(USERROLE);
-    }
+  static signOut() {
+    window.localStorage.removeItem(TOKEN);
+    window.localStorage.removeItem(USERID);
+    window.localStorage.removeItem(USERROLE);
+  }
 
-    static savedUserId(userId: any) {
-      window.localStorage.removeItem(USERID);
-      window.localStorage.setItem(USERID,userId);
-    }
+  static savedUserId(userId: any) {
+    window.localStorage.removeItem(USERID);
+    window.localStorage.setItem(USERID,userId);
+  }
   
-    static savedUserRole(role: any) {
-      window.localStorage.removeItem(USERROLE);
-      window.localStorage.setItem(USERROLE,role);
-    }
+  static savedUserRole(role: any) {
+    window.localStorage.removeItem(USERROLE);
+    window.localStorage.setItem(USERROLE,role);
+  }
   
-    static savedToken(token: string | null) {
-      if(token) {
-        const tokenWithoutBearer = token.replace('Bearer ', '');
-        window.localStorage.removeItem(TOKEN)
-        window.localStorage.setItem(TOKEN, tokenWithoutBearer)
-      } else {
-        console.error('Token is null');
-      }
+  static savedToken(token: string | null) {
+    if(token) {
+      const tokenWithoutBearer = token.replace('Bearer ', '');
+      window.localStorage.removeItem(TOKEN)
+      window.localStorage.setItem(TOKEN, tokenWithoutBearer)
+    } else {
+      console.error('Token is null');
     }
+  }
 }
