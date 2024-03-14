@@ -84,7 +84,8 @@ export class UpdateUsersComponent {
     this.service.updateUser(this.id, this.updateForm.value).subscribe((res) => {
       console.log(res)
       if(res.updated_user != null) {
-        this.router.navigateByUrl("/users-table")
+        alert("User updated successfully");
+        this.router.navigateByUrl("/admin/users-table");
       }
     })
   }

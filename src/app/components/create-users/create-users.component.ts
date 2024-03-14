@@ -73,7 +73,9 @@ export class CreateUsersComponent {
     createUser() {
       console.log(this.userForm?.value)
       this.service.addUser(this.userForm?.value).subscribe((response) => {
-        console.log(response)
+        console.log(response);
+        alert("User created successfully");
+        this.router.navigateByUrl('/admin/users-table')
       })
       
     }

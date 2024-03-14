@@ -88,6 +88,7 @@ export class UsersTableComponent implements OnInit{
   deleteUser(id: number) {
     this.service.deleteUser(id).subscribe((res) => {
       console.log(res);
+      alert("User deleted successfully");
       this.getUsers();
     })
   }

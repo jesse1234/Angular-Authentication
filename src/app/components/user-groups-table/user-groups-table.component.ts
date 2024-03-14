@@ -61,6 +61,7 @@ export class UserGroupsTableComponent implements OnInit{
   deleteUserGroup(id: number) {
     this.service.deleteUserGroup(id).subscribe((res) => {
       console.log(res);
+      alert("User Group deleted successfully");
       this.getUserGroups();
     })
   }

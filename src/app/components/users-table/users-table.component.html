@@ -11,7 +11,7 @@
                 <h1>Users Table</h1>
             </div>
             <div class="col-sm-6">
-                <button type="submit" class="btn btn-block btn-primary" routerLink="/create-user" style="width:250px; float: right;">Create User</button>
+                <button type="submit" class="btn btn-block btn-primary" routerLink="/admin/create-user" style="width:250px; float: right;">Create User</button>
             </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -137,7 +137,7 @@
                                 <td>{{ user.modified_by }}</td>
                                 <td>{{ user.created_status }}</td>
                                 <td>{{ user.role }}</td>
-                                <td><button type="submit" [routerLink]="['/update-user', user.id]" class="btn btn-block btn-info">Update User</button></td>
+                                <td><button type="submit" [routerLink]="['/admin/update-user', user.id]" class="btn btn-block btn-info">Update User</button></td>
                                 <td><button type="submit" (click)="deleteUser(user.id)" class="btn btn-block btn-danger">Delete User</button></td>
                             </tr>
                             </tbody>

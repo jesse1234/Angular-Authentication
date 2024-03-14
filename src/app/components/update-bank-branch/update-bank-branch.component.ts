@@ -62,7 +62,8 @@ export class UpdateBankBranchComponent {
     this.service.updateBankBranch(this.id, this.updateBranch.value).subscribe((res: any) => {
       console.log(res)
       if(res.updated_branch != null) {
-        this.router.navigateByUrl('/bank-branch-table')
+        alert("Bank Branch updated successfully");
+        this.router.navigateByUrl('/admin/bank-branch-table');
       }
     })
   }

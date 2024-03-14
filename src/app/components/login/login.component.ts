@@ -41,7 +41,7 @@ export class LoginComponent {
       if (localStorage.getItem('I_role') === "USER") {
         this.router.navigateByUrl('/user/dashboard');
       } else if (localStorage.getItem('I_role') === "ADMIN") {
-        this.router.navigateByUrl('/dashboard');
+        this.router.navigateByUrl('/admin/dashboard');
       } else {
         // Handle other roles or unexpected scenarios
         console.error('Unknown user role');

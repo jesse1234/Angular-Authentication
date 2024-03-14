@@ -15,8 +15,8 @@ export class UserRoleGuard implements CanActivate{
     if(Role == 'USER'){
       return true;
     } else if(Role == 'ADMIN'){
-      this.router.navigateByUrl('/dashboard');
-      alert("You do not have user credentials");
+      this.router.navigateByUrl('/admin/dashboard');
+      alert("You do not have USER credentials");
       return false;
     } else {
       // Handle other roles or unexpected scenarios

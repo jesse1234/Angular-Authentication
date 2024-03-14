@@ -62,6 +62,7 @@ export class BankBranchTableComponent {
   deleteBankBranch(id: number) {
     this.service.deleteBankBranch(id).subscribe((res) => {
       console.log(res);
+      alert("Bank Branch deleted successfully");
       this.getBankBranches();
     })
   }

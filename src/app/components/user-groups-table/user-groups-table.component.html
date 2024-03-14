@@ -11,7 +11,7 @@
                 <h1>User Groups Table</h1>
             </div>
             <div class="col-sm-6">
-                <button type="submit" class="btn btn-block btn-primary" routerLink="/create-user-group" style="width:250px; float: right;">Create User Groups</button>
+                <button type="submit" class="btn btn-block btn-primary" routerLink="/admin/create-user-group" style="width:250px; float: right;">Create User Groups</button>
             </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -88,7 +88,7 @@
                                 <td>{{group.modified_on}}</td>
                                 <td>{{group.group_codes}}</td>
                                 <td>{{group.group_names}}</td>
-                                <td><button type="submit" class="btn btn-block btn-info" [routerLink]="['/update-user-group', group.id]">Update User Group</button></td>
+                                <td><button type="submit" class="btn btn-block btn-info" [routerLink]="['/admin/update-user-group', group.id]">Update User Group</button></td>
                                 <td><button type="submit" class="btn btn-block btn-danger" (click)="deleteUserGroup(group.id)">Delete User Group</button></td>
                             </tr>
                             </tbody>

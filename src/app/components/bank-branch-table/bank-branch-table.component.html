@@ -11,7 +11,7 @@
                 <h1>Bank Branch Table</h1>
             </div>
             <div class="col-sm-6">
-                <button type="submit" class="btn btn-block btn-primary" routerLink="/create-bank-branch" style="width:250px; float: right;">Create Bank Branch</button>
+                <button type="submit" class="btn btn-block btn-primary" routerLink="/admin/create-bank-branch" style="width:250px; float: right;">Create Bank Branch</button>
             </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -96,7 +96,7 @@
                                 <td>{{branch.modified_date}}</td>
                                 <td>{{branch.modified_by}}</td>
                                 <!-- <td>{{branch.created_status}}</td> -->
-                                <td><button type="submit" class="btn btn-block btn-info" [routerLink]="['/update-bank-branch', branch.id]">Update Bank Branch</button></td>
+                                <td><button type="submit" class="btn btn-block btn-info" [routerLink]="['/admin/update-bank-branch', branch.id]">Update Bank Branch</button></td>
                                 <td><button type="submit" class="btn btn-block btn-danger" (click)="deleteBankBranch(branch.id)">Delete Bank Branch</button></td>
                             </tr>
                             </tbody>

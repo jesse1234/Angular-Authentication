@@ -51,7 +51,8 @@ export class CreateBankBranchComponent {
     console.log(this.createBranch.value)
     this.service.addBankBranch(this.createBranch.value).subscribe((res) => {
       console.log(res);
-      this.router.navigateByUrl('/bank-branch-table');
+      alert("Bank Branch created successfully");
+      this.router.navigateByUrl('/admin/bank-branch-table');
     })
   }
 }

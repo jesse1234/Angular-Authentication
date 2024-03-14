@@ -48,8 +48,9 @@ export class CreateUserGroupComponent {
   createUserGroup() {
     console.log(this.groupsForm?.value)
     this.service.addUserGroup(this.groupsForm?.value).subscribe((response) => {
-      console.log(response)
-      this.router.navigateByUrl('/user-groups-table')
+      console.log(response);
+      alert("User Group created successfully");
+      this.router.navigateByUrl('/admin/user-groups-table');
     })
   }
 }

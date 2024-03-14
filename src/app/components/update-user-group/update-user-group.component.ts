@@ -59,7 +59,8 @@ export class UpdateUserGroupComponent {
     this.service.updateUserGroup(this.id, this.updateGroups.value).subscribe((res:any) => {
       console.log(res)
       if(res.updated_user_group_master !=null) {
-        this.router.navigateByUrl('/user-groups-table');
+        alert("User Group updated successfully");
+        this.router.navigateByUrl('/admin/user-groups-table');
       }
     })
   }
