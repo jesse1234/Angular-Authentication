@@ -16,21 +16,26 @@ import { UpdateBankBranchComponent } from './components/update-bank-branch/updat
 import { UsersModule } from './users/users.module';
 import { RoleGuard } from './guard/role.guard';
 import { AuthGuard } from './guard/auth.guard';
+import { ApproveUserComponent } from './components/approve-user/approve-user.component';
+import { ApproveUserTableComponent } from './components/approve-user-table/approve-user-table.component';
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'login', component: LoginComponent},
   {path: 'admin/dashboard', component: DashboardComponent, canActivate: [RoleGuard]},
-  {path: 'admin/users-table', component: UsersTableComponent, canActivate: [AuthGuard]},
-  {path: 'admin/update-user/:id', component: UpdateUsersComponent, canActivate: [AuthGuard]},
-  {path: 'admin/create-user', component:CreateUsersComponent, canActivate: [AuthGuard]},
-  {path: 'admin/user-groups-table', component:UserGroupsTableComponent, canActivate: [AuthGuard]},
-  {path: 'admin/create-user-group', component: CreateUserGroupComponent, canActivate: [AuthGuard]},
-  {path: 'admin/update-user-group/:id', component: UpdateUserGroupComponent, canActivate: [AuthGuard]},
-  {path: 'admin/bank-branch-table', component: BankBranchTableComponent, canActivate: [AuthGuard]},
-  {path: 'admin/create-bank-branch', component: CreateBankBranchComponent, canActivate: [AuthGuard]},
-  {path: 'admin/update-bank-branch/:id', component: UpdateBankBranchComponent, canActivate: [AuthGuard]},
+  {path: 'admin/users-table', component: UsersTableComponent, canActivate: [AuthGuard, RoleGuard]},
+  {path: 'admin/update-user/:id', component: UpdateUsersComponent, canActivate: [AuthGuard, RoleGuard]},
+  {path: 'admin/create-user', component:CreateUsersComponent, canActivate: [AuthGuard, RoleGuard]},
+  {path: 'admin/approve-user', component:ApproveUserComponent, canActivate: [AuthGuard, RoleGuard]},
+  {path: 'admin/user-groups-table', component:UserGroupsTableComponent, canActivate: [AuthGuard, RoleGuard]},
+  {path: 'admin/create-user-group', component: CreateUserGroupComponent, canActivate: [AuthGuard, RoleGuard]},
+  {path: 'admin/update-user-group/:id', component: UpdateUserGroupComponent, canActivate: [AuthGuard, RoleGuard]},
+  {path: 'admin/bank-branch-table', component: BankBranchTableComponent, canActivate: [AuthGuard, RoleGuard]},
+  {path: 'admin/create-bank-branch', component: CreateBankBranchComponent, canActivate: [AuthGuard, RoleGuard]},
+  {path: 'admin/update-bank-branch/:id', component: UpdateBankBranchComponent, canActivate: [AuthGuard, RoleGuard]},
+  {path: 'admin/approve-user/:id', component: ApproveUserComponent, canActivate:[AuthGuard, RoleGuard]},
+  {path: 'admin/approve-user-table', component: ApproveUserTableComponent, canActivate:[AuthGuard, RoleGuard]},
 
   {path: 'user',loadChildren:() => import('./users/users.module').then(m => m.UsersModule)}
 ];

@@ -91,6 +91,14 @@ export class UsersService {
     return this.http.delete(BASE_URL + `users/delete/${id}`)
   }
 
+  approveUser(id: number, approveUser: any): Observable<any> {
+    return this.http.put(BASE_URL + `approve-user/${id}`, approveUser)
+  }
+
+  getAllUserGroups() {
+    return this.http.get(BASE_URL + 'user-groups')
+  }
+
   addUserGroup(addUserGroup: any): Observable<any> {
     return this.http.post(BASE_URL + 'user-groups/add', addUserGroup);
   }

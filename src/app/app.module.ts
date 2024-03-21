@@ -24,6 +24,9 @@ import { BankBranchTableComponent } from './components/bank-branch-table/bank-br
 import { CreateBankBranchComponent } from './components/create-bank-branch/create-bank-branch.component';
 import { UpdateBankBranchComponent } from './components/update-bank-branch/update-bank-branch.component';
 import { UsersModule } from './users/users.module';
+import { UserFilterPipe } from './filter/user-filter.pipe';
+import { ApproveUserComponent } from './components/approve-user/approve-user.component';
+import { ApproveUserTableComponent } from './components/approve-user-table/approve-user-table.component';
 
 
 
@@ -48,6 +51,9 @@ import { UsersModule } from './users/users.module';
     BankBranchTableComponent,
     CreateBankBranchComponent,
     UpdateBankBranchComponent,
+    UserFilterPipe,
+    ApproveUserComponent,
+    ApproveUserTableComponent,
 
   ],
   imports: [

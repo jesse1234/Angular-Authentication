@@ -1,0 +1,84 @@
+<div class="wrapper">
+    <app-main-header></app-main-header>
+    <app-main-sidebar></app-main-sidebar>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Approve Users Table</h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-12">
+                <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title"></h3>
+                </div>
+                <!-- /.card-header -->
+                <input type="search" class="form-control" placeholder="Search" [(ngModel)]="searchtext" id="search-bar">
+                <div class="card-body">
+                    <div class="table-wrapper">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Email</th>
+                                <th>First Name</th>
+                                <th>Fullname</th>
+                                <th>Phone</th>
+                                <th>Surname</th>
+                                <th>Username</th>
+                                <th>Status</th>
+                                <th>Verified</th>
+                                <th>Verified By</th>
+                                <th>Verified On</th>
+                                <th>Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let user of users | userFilter:searchtext">
+                                <td>{{ user.id }}</td>
+                                <td>{{ user.email }}</td>
+                                <td>{{ user.first_name }}</td>
+                                <td>{{ user.fullname }}</td>
+                                <td>{{ user.phone }}</td>
+                                <td>{{ user.surname }}</td>
+                                <td>{{ user.username }}</td>
+                                <td>{{ user.status }}</td>
+                                <td>{{ user.verified }}</td>
+                                <td>{{ user.verified_by }}</td>
+                                <td>{{ user.verified_on }}</td>
+                                <td><button type="submit" [routerLink]="['/admin/approve-user', user.id]" class="btn btn-block btn-success">Approve User</button></td>
+                                </tr>
+                            </tbody>
+                            </table>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <app-content-sidebar></app-content-sidebar>
+    <app-main-footer></app-main-footer>
+  </div>
+  <!-- ./wrapper -->
+
+

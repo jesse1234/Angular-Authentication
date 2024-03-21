@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { UserModule } from '../../models/user/user.module';
-import { UsersService } from '../../service/users.service';
 import { HttpClient } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { UsersService } from '../../service/users.service';
 
 export class Users {
   constructor (
@@ -58,14 +57,12 @@ export class Users {
   ) {}
   }
 
-
 @Component({
-  selector: 'app-users-table',
-  templateUrl: './users-table.component.html',
-  styleUrl: './users-table.component.css'
+  selector: 'app-approve-user-table',
+  templateUrl: './approve-user-table.component.html',
+  styleUrl: './approve-user-table.component.css'
 })
-export class UsersTableComponent implements OnInit{
-
+export class ApproveUserTableComponent {
   users!: Users[];
   searchtext:any;
   
@@ -81,18 +78,9 @@ export class UsersTableComponent implements OnInit{
   getUsers() {
     this.httpClient.get<any>('http://localhost:8080/users').subscribe(
       response => {
-        this.users = response['users'].filter((user: Users) => user.status === 1);
+        this.users = response['users'].filter((user: Users) => user.status === 0);
         console.log(response['users']);
       }
     );
   }
-
-  deleteUser(id: number) {
-    this.service.deleteUser(id).subscribe((res) => {
-      console.log(res);
-      alert("User deleted successfully");
-      this.getUsers();
-    })
-  }
-  
 }

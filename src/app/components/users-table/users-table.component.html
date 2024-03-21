@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Users Table</h1>
+                <h1>Active Users Table</h1>
             </div>
             <div class="col-sm-6">
                 <button type="submit" class="btn btn-block btn-primary" routerLink="/admin/create-user" style="width:250px; float: right;">Create User</button>
@@ -27,6 +27,7 @@
                     <h3 class="card-title"></h3>
                 </div>
                 <!-- /.card-header -->
+                <input type="search" class="form-control" placeholder="Search" [(ngModel)]="searchtext" id="search-bar">
                 <div class="card-body">
                     <div class="table-wrapper">
                         <table id="example2" class="table table-bordered table-hover">
@@ -46,9 +47,9 @@
                                 <th>Type ID</th>
                                 <th>Created By</th>
                                 <th>Created At</th>
-                                <th>Agent ID</th>
+                                <!-- <th>Agent ID</th> -->
                                 <th>Status</th>
-                                <th>Verification Pass</th>
+                                <!-- <th>Verification Pass</th> -->
                                 <th>Verified</th>
                                 <th>Verified By</th>
                                 <th>Verified On</th>
@@ -62,23 +63,23 @@
                                 <th>Reset</th>
                                 <th>Reject</th>
                                 <th>Deleted</th>
-                                <th>Deleted By</th>
+                                <!-- <th>Deleted By</th>
                                 <th>Deleted On</th>
                                 <th>Apprv Deleted By</th>
                                 <th>Apprv Deleted On</th>
                                 <th>Apprv Rejected By</th>
-                                <th>Apprv Rejected On</th>
+                                <th>Apprv Rejected On</th> -->
                                 <th>Creation Status</th>
                                 <!-- <th>Create Json</th>
                                 <th>Update Json</th> -->
                                 <th>Last Login Date</th>
-                                <th>LoginAttempts</th>
+                                <th>Login Attempts</th>
                                 <th>Modified On</th>
-                                <th>Unblocked By</th>
+                                <!-- <th>Unblocked By</th>
                                 <th>Blocked By</th>
                                 <th>Unblocked On</th>
-                                <th>Blocked On</th>
-                                <th>IDNumber</th>
+                                <th>Blocked On</th> -->
+                                <!-- <th>IDNumber</th> -->
                                 <th>Modified By</th>
                                 <th>Created Status</th>
                                 <th>Role</th>
@@ -86,7 +87,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr *ngFor="let user of users">
+                            <tr *ngFor="let user of users | userFilter:searchtext">
                                 <td>{{ user.id }}</td>
                                 <td>{{ user.email }}</td>
                                 <td>{{ user.first_name }}</td>
@@ -101,9 +102,9 @@
                                 <td>{{ user.type_id }}</td>
                                 <td>{{ user.created_by }}</td>
                                 <td>{{ user.created_at }}</td>
-                                <td>{{ user.agent_id }}</td>
+                                <!-- <td>{{ user.agent_id }}</td> -->
                                 <td>{{ user.status }}</td>
-                                <td>{{ user.verification_pass }}</td>
+                                <!-- <td>{{ user.verification_pass }}</td> -->
                                 <td>{{ user.verified }}</td>
                                 <td>{{ user.verified_by }}</td>
                                 <td>{{ user.verified_on }}</td>
@@ -117,23 +118,23 @@
                                 <td>{{ user.reset }}</td>
                                 <td>{{ user.reject }}</td>
                                 <td>{{ user.deleted }}</td>
-                                <td>{{ user.deleted_by }}</td>
+                                <!-- <td>{{ user.deleted_by }}</td>
                                 <td>{{ user.deleted_on }}</td>
                                 <td>{{ user.apprv_deleted_by }}</td>
                                 <td>{{ user.apprv_deleted_on }}</td>
                                 <td>{{ user.apprv_rejected_by }}</td>
-                                <td>{{ user.apprv_rejected_on }}</td>
+                                <td>{{ user.apprv_rejected_on }}</td> -->
                                 <td>{{ user.creationStatus }}</td>
                                 <!-- <td>{{ user.create_json }}</td>
                                 <td>{{ user.update_json }}</td> -->
                                 <td>{{ user.last_login_date }}</td>
                                 <td>{{ user.loginattempts }}</td>
                                 <td>{{ user.modified_on }}</td>
-                                <td>{{ user.unblocked_by }}</td>
+                                <!-- <td>{{ user.unblocked_by }}</td>
                                 <td>{{ user.blocked_by }}</td>
                                 <td>{{ user.unblocked_on }}</td>
-                                <td>{{ user.blocked_on }}</td>
-                                <td>{{ user.IDNumber }}</td>
+                                <td>{{ user.blocked_on }}</td> -->
+                                <!-- <td>{{ user.IDNumber }}</td> -->
                                 <td>{{ user.modified_by }}</td>
                                 <td>{{ user.created_status }}</td>
                                 <td>{{ user.role }}</td>

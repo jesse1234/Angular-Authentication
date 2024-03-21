@@ -1,0 +1,68 @@
+<div class="wrapper">
+    <app-main-header></app-main-header>
+    <app-main-sidebar></app-main-sidebar>
+    <div class="content-wrapper">
+        <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Approve User</h3>
+            </div>
+            <!-- /.card-header --> 
+            <!-- form start -->
+            <form [formGroup]="approveForm">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" name="email" placeholder="Enter email" formControlName="email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">First Name</label>
+                  <input type="text" class="form-control" name="first_name" placeholder="First Name" formControlName="first_name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Full Name</label>
+                  <input type="text" class="form-control" name="fullname" placeholder="Full Name" formControlName="fullname">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Phone</label>
+                  <input type="number" class="form-control" name="phone" placeholder="Phone" formControlName="phone">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Surname</label>
+                  <input type="text" class="form-control" name="surname" placeholder="Surname" formControlName="surname">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Username</label>
+                  <input type="text" class="form-control" name="username" placeholder="Username" formControlName="username">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Status</label>
+                    <input type="number" class="form-control" name="status" placeholder="Status" formControlName="status">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Verified</label>
+                  <input type="text" class="form-control" name="verified" placeholder="Verified" formControlName="verified">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Verified By</label>
+                  <input type="number" class="form-control" name="verified_by" placeholder="Verified By" formControlName="verified_by">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Verified On</label>
+                  <input type="datetime-local" class="form-control" name="verified_on" placeholder="Verified On" formControlName="verified_on">
+                </div>
+              </div>
+              <!-- /.card-body -->
+    
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary" (click)="approveUser()">Submit</button>
+              </div>
+            </form>
+          </div>
+    </div>
+    <app-content-sidebar></app-content-sidebar>
+    <app-main-footer></app-main-footer>
+  </div>
+  <!-- ./wrapper -->
+
+
+

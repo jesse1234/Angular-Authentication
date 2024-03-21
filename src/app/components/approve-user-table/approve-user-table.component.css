@@ -1,0 +1,11 @@
+.card-body {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    max-height: 800px; /* Set a maximum height for vertical scrolling */
+  }
+  
+  #search-bar {
+    margin-left:20px;
+    width:1195px;
+  }
+  
+  

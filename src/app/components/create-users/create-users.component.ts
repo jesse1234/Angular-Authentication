@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UsersService } from '../../service/users.service';
 import { response } from 'express';
 import { Router } from '@angular/router';
+import { BankBranchService } from '../../service/bank-branch.service';
+import { LocalStorageService } from '../../service/storage-service/local-storage.service';
 
 @Component({
   selector: 'app-create-users',
@@ -11,10 +13,15 @@ import { Router } from '@angular/router';
 })
 export class CreateUsersComponent {
   userForm!: FormGroup;
+  bankBranches: any[] = [];
+  selectedBranchId: number | null=null;
+
+  userGroups: any[] = []
 
   constructor(private service: UsersService,
     private fb: FormBuilder,
-    private router: Router) {}
+    private router: Router,
+    private branchService: BankBranchService) {}
 
     ngOnInit() {
       this.userForm = this.fb.group({
@@ -67,7 +74,18 @@ export class CreateUsersComponent {
           modified_by: [''],
           created_status: [''],
           role: [''],
+      });
+      const userId = localStorage.getItem('I_user');
+      this.userForm.patchValue({
+        created_by: userId,
+        deleted_by: userId,
+        apprv_deleted_by: userId,
+        apprv_rejected_by: userId,
+        blocked_by: userId,
+        unblocked_by: userId,
+        modified_by: userId
       })
+
     }
 
     createUser() {
@@ -78,5 +96,17 @@ export class CreateUsersComponent {
         this.router.navigateByUrl('/admin/users-table')
       })
       
+    }
+
+    loadBankBranch() {
+      this.branchService.getAllBankBranches().subscribe((branches: any) => {
+        this.bankBranches = branches['branches'];
+      })
+    }
+
+    loadUserGroup() {
+      this.service.getAllUserGroups().subscribe((groups: any) => {
+        this.userGroups = groups['user_group_masters'];
+      })
     }
 }

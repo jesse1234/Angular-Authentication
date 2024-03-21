@@ -11,6 +11,10 @@ export class BankBranchService {
 
   constructor(private http: HttpClient) { }
 
+  getAllBankBranches() {
+    return this.http.get(BASE_URL + 'bank-branch');
+  }
+
   addBankBranch(addBranch: any): Observable<any> {
     return this.http.post(BASE_URL + 'bank-branch/add', addBranch);
   }
