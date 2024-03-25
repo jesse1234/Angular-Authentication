@@ -8,6 +8,9 @@ import { MainHeaderComponent } from './layout/main-header/main-header.component'
 import { ContentWrapperComponent } from './layout/content-wrapper/content-wrapper.component';
 import { ContentSidebarComponent } from './layout/content-sidebar/content-sidebar.component';
 import { MainFooterComponent } from './layout/main-footer/main-footer.component';
+import { UserChangePasswordComponent } from './components/user-change-password/user-change-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -17,11 +20,15 @@ import { MainFooterComponent } from './layout/main-footer/main-footer.component'
     MainHeaderComponent,
     ContentWrapperComponent,
     ContentSidebarComponent,
-    MainFooterComponent
+    MainFooterComponent,
+    UserChangePasswordComponent,
+
   ],
   imports: [
     CommonModule,
-    UsersRoutingModule
+    UsersRoutingModule,
+    ReactiveFormsModule,
+    
   ]
 })
 export class UsersModule { }

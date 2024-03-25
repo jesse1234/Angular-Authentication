@@ -75,6 +75,10 @@ export class UsersService {
 
   }
 
+  getAllUsers(): Observable<any[]> {
+    return this.http.get<any[]>(BASE_URL + 'users');
+  }
+
   addUser(addUser: any): Observable<any> {
     return this.http.post(BASE_URL + "users/add", addUser);
   }
@@ -113,5 +117,9 @@ export class UsersService {
 
   deleteUserGroup(id: number) {
     return this.http.delete(BASE_URL + `user-groups/delete/${id}`);
+  }
+
+  getUserId() {
+    return localStorage.getItem("I_user");
   }
 }

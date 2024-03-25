@@ -1,3 +1,4 @@
+
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand navbar-dark">
     <!-- Left navbar links -->
@@ -6,7 +7,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a routerLink="/admin/dashboard" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -132,7 +133,35 @@
           <i class="fas fa-th-large"></i>
         </a>
       </li>
+      <li>
+          <img src="assets/img/user2-160x160.jpg" class="img-circle elevation-2" id='profile-image' alt="User Image" (click)="toggleMenu()">
+          <div class="sub-menu-wrap" id="subMenu" [ngClass]="{'open-menu': isOpen}">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="assets/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                <h3>{{message}}, {{username}}</h3>
+              </div>
+              <hr>
+
+              <a routerLink="" class="sub-menu-link" (click)="changePassword()" >
+                <img src="assets/img/profile.png" class="img-circle elevation-2" alt="User Image">
+                <p>Change Password</p>
+                <span>></span>
+              </a>
+              <a href="" class="sub-menu-link" >
+                <img src="assets/img/logout.png" class="img-circle elevation-2" alt="User Image" (click)="logouts()">
+                <p (click)="logouts()">Logout</p>
+                <span (click)="logouts()">></span>
+              </a>
+
+            </div>
+          </div>
+      </li>
     </ul>
   </nav>
   <!-- /.navbar -->
+  
 
+
+
+  

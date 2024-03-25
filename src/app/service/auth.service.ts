@@ -44,6 +44,10 @@ export class AuthService {
     console.log('User Auth Service: Authenticated')
   }
 
+  changePassword(id: number, newPassword: any): Observable<any> {
+    return this.http.put(BASE_URL + `change-password/${id}`, newPassword);
+  }
+
   hello(): Observable<any> {
     return this.http.get(BASE_URL + "api/hello", {
       headers: this.createAuthorizationHeader()

@@ -18,6 +18,9 @@ import { RoleGuard } from './guard/role.guard';
 import { AuthGuard } from './guard/auth.guard';
 import { ApproveUserComponent } from './components/approve-user/approve-user.component';
 import { ApproveUserTableComponent } from './components/approve-user-table/approve-user-table.component';
+import { AdminChangePasswordComponent } from './components/admin-change-password/admin-change-password.component';
+import { ChartsComponent } from './components/charts/charts.component';
+
 
 const routes: Routes = [
   {path: '', component: LandingComponent},
@@ -36,6 +39,8 @@ const routes: Routes = [
   {path: 'admin/update-bank-branch/:id', component: UpdateBankBranchComponent, canActivate: [AuthGuard, RoleGuard]},
   {path: 'admin/approve-user/:id', component: ApproveUserComponent, canActivate:[AuthGuard, RoleGuard]},
   {path: 'admin/approve-user-table', component: ApproveUserTableComponent, canActivate:[AuthGuard, RoleGuard]},
+  {path: 'admin/change-password/:id', component: AdminChangePasswordComponent},
+  {path: 'charts', component: ChartsComponent},
 
   {path: 'user',loadChildren:() => import('./users/users.module').then(m => m.UsersModule)}
 ];

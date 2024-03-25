@@ -23,11 +23,13 @@ import { UpdateUserGroupComponent } from './components/update-user-group/update-
 import { BankBranchTableComponent } from './components/bank-branch-table/bank-branch-table.component';
 import { CreateBankBranchComponent } from './components/create-bank-branch/create-bank-branch.component';
 import { UpdateBankBranchComponent } from './components/update-bank-branch/update-bank-branch.component';
-import { UsersModule } from './users/users.module';
+
 import { UserFilterPipe } from './filter/user-filter.pipe';
 import { ApproveUserComponent } from './components/approve-user/approve-user.component';
 import { ApproveUserTableComponent } from './components/approve-user-table/approve-user-table.component';
-
+import { AdminChangePasswordComponent } from './components/admin-change-password/admin-change-password.component';
+import { UsersModule } from './users/users.module';
+import { ChartsComponent } from './components/charts/charts.component';
 
 
 @NgModule({
@@ -54,6 +56,8 @@ import { ApproveUserTableComponent } from './components/approve-user-table/appro
     UserFilterPipe,
     ApproveUserComponent,
     ApproveUserTableComponent,
+    AdminChangePasswordComponent,
+    ChartsComponent,
 
   ],
   imports: [
@@ -62,7 +66,8 @@ import { ApproveUserTableComponent } from './components/approve-user-table/appro
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    UsersModule
+    UsersModule,
+    
   ],
   providers: [
     provideClientHydration(),
